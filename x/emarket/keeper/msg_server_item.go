@@ -21,6 +21,7 @@ func (k msgServer) CreateItem(goCtx context.Context, msg *types.MsgCreateItem) (
 		Amount:      msg.Amount,
 		Price:       msg.Price,
 		Discounted:  msg.Discounted,
+		Tags:        msg.Tags,
 	}
 
 	id := k.AppendItem(
@@ -44,6 +45,7 @@ func (k msgServer) UpdateItem(goCtx context.Context, msg *types.MsgUpdateItem) (
 		Amount:      msg.Amount,
 		Price:       msg.Price,
 		Discounted:  msg.Discounted,
+		Tags:        msg.Tags,
 	}
 
 	// Checks that the element exists

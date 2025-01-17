@@ -48,6 +48,7 @@ message MsgCreateItem {
   int32  amount      = 4;
   int32  price       = 5;
   bool   discounted  = 6;
+  string tags        = 7;
 }
 
 message MsgCreateItemResponse {
@@ -63,6 +64,7 @@ message MsgUpdateItem {
   int32  amount      = 5;
   int32  price       = 6;
   bool   discounted  = 7;
+  string tags        = 8;
 }
 
 message MsgUpdateItemResponse {}

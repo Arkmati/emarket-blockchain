@@ -8,7 +8,7 @@ import (
 
 var _ sdk.Msg = &MsgCreateItem{}
 
-func NewMsgCreateItem(creator string, name string, productType string, amount int32, price int32, discounted bool) *MsgCreateItem {
+func NewMsgCreateItem(creator string, name string, productType string, amount int32, price int32, discounted bool, tags string) *MsgCreateItem {
 	return &MsgCreateItem{
 		Creator:     creator,
 		Name:        name,
@@ -16,6 +16,7 @@ func NewMsgCreateItem(creator string, name string, productType string, amount in
 		Amount:      amount,
 		Price:       price,
 		Discounted:  discounted,
+		Tags:        tags,
 	}
 }
 
@@ -29,7 +30,7 @@ func (msg *MsgCreateItem) ValidateBasic() error {
 
 var _ sdk.Msg = &MsgUpdateItem{}
 
-func NewMsgUpdateItem(creator string, id uint64, name string, productType string, amount int32, price int32, discounted bool) *MsgUpdateItem {
+func NewMsgUpdateItem(creator string, id uint64, name string, productType string, amount int32, price int32, discounted bool, tags string) *MsgUpdateItem {
 	return &MsgUpdateItem{
 		Id:          id,
 		Creator:     creator,
@@ -38,6 +39,7 @@ func NewMsgUpdateItem(creator string, id uint64, name string, productType string
 		Amount:      amount,
 		Price:       price,
 		Discounted:  discounted,
+		Tags:        tags,
 	}
 }
 

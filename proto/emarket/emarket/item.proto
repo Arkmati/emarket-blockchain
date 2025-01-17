@@ -11,4 +11,5 @@ message Item {
   int32 price = 5; 
   bool discounted = 6; 
   string creator = 7;
+  string tags = 8;
 }

@@ -41,15 +41,15 @@ func (am AppModule) AutoCLIOptions() *autocliv1.ModuleOptions {
 				},
 				{
 					RpcMethod:      "CreateItem",
-					Use:            "create-item [name] [productType] [amount] [price] [discounted]",
+					Use:            "create-item [name] [productType] [amount] [price] [discounted] [tags]",
 					Short:          "Create item",
-					PositionalArgs: []*autocliv1.PositionalArgDescriptor{{ProtoField: "name"}, {ProtoField: "productType"}, {ProtoField: "amount"}, {ProtoField: "price"}, {ProtoField: "discounted"}},
+					PositionalArgs: []*autocliv1.PositionalArgDescriptor{{ProtoField: "name"}, {ProtoField: "productType"}, {ProtoField: "amount"}, {ProtoField: "price"}, {ProtoField: "discounted"}, {ProtoField: "tags"}},
 				},
 				{
 					RpcMethod:      "UpdateItem",
-					Use:            "update-item [id] [name] [productType] [amount] [price] [discounted]",
+					Use:            "update-item [id] [name] [productType] [amount] [price] [discounted] [tags]",
 					Short:          "Update item",
-					PositionalArgs: []*autocliv1.PositionalArgDescriptor{{ProtoField: "id"}, {ProtoField: "name"}, {ProtoField: "productType"}, {ProtoField: "amount"}, {ProtoField: "price"}, {ProtoField: "discounted"}},
+					PositionalArgs: []*autocliv1.PositionalArgDescriptor{{ProtoField: "id"}, {ProtoField: "name"}, {ProtoField: "productType"}, {ProtoField: "amount"}, {ProtoField: "price"}, {ProtoField: "discounted"}, {ProtoField: "tags"}},
 				},
 				{
 					RpcMethod:      "DeleteItem",
